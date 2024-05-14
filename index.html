@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<canvas id="canvas" width="500" height="300" style="border: 1px solid red"></canvas>
+<script src="Circle.js"></script>
+<script>
+
+    let circle = new Circle(100, 200, 20, "red");
+    circle.draw();
+    // cu sau 1 khoang thoi gian lap lai hanh dong
+    // setInterval(() => {
+    //     // hanh dong
+    //     circle.clear();
+    //     circle.move();
+    //     circle.draw();
+    //
+    // }, 100)
+
+
+    function play() {
+        circle.clear();
+        circle.move();
+        circle.draw();
+        requestAnimationFrame(play); // FPS
+    }
+
+    play();
+
+
+    // Ve hinh tron, hinh chu nhat, text tren canvas
+    // Ap dung object
+
+
+
+</script>
+</body>
+</html>
